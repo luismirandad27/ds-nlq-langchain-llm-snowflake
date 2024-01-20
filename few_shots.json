@@ -1,0 +1,9 @@
+{
+    "What is the total population of Alabama?":"SELECT sum(tot_census_pop_2020) as \"Total Population\" FROM census_data_zip_codes  WHERE state_code = 'AL'",
+    "Total number of zipcodes":"SELECT COUNT(1) as \"Total Number Zip Codes\" FROM census_data_zip_codes",
+    "Highest estimate housing units by state":"SELECT  state_code, MAX(tot_home_available_2021) as \"Total Housing Units\" FROM census_data_zip_codes GROUP BY state_code ORDER BY \"Total Housing Units\" DESC",
+    "Unemployment rate in Oklahoma":"SELECT  round(avg(rt_unemployment*100),2) as \"Unemployment Rate\" FROM census_data_zip_codes WHERE state_code = 'OK'",
+    "In which state is located king county":"SELECT DISTINCT state_code as \"State Code\" FROM census_data_zip_codes WHERE county_name LIKE '%king%' AND LOWER(county_name) LIKE '%county%'",
+    "in which zip code we have the lowest unemployment.":"SELECT zip_code as \"Zip Code\", round(MIN(rt_unemployment),2) as \"Unemployment Rate\" FROM census_data_zip_codes WHERE rt_unemployment is not NULL GROUP BY \"Zip Code\"",
+    "Show me the historical data of house prices on California of the last 5 years":"select to_char(to_date(month_code::string,'YYYYMM'),'YYYY-MM') as month, avg(avg_home_value_price) as avg_home_value_price from home_value_zillow_zip_codes where state_code = 'CA' and month_code >= to_char(dateadd(year, -5, current_date()),'yyyymm')::numeric group by to_char(to_date(month_code::string,'YYYYMM'),'YYYY-MM') order by to_char(to_date(month_code::string,'YYYYMM'),'YYYY-MM')"
+}
