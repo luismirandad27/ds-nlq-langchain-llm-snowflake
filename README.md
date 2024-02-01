@@ -2,4 +2,4 @@
 
 ![langchain](/assets/langchain-bird.jpeg)
 
-Check the full detail of the article on Medium!: [Link]([https://medium.com/p/74ecdefecf0a/edit](https://medium.com/mlearning-ai/enhancing-nlq-streamlined-integration-of-llms-and-databases-with-langchain-74ecdefecf0a)https://medium.com/mlearning-ai/enhancing-nlq-streamlined-integration-of-llms-and-databases-with-langchain-74ecdefecf0a)
+Check the full detail of the article on Medium!: [Link](https://medium.com/mlearning-ai/enhancing-nlq-streamlined-integration-of-llms-and-databases-with-langchain-74ecdefecf0a)
